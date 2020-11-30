@@ -1,5 +1,6 @@
-/* You can add global styles to this file, and also import other style files */
-/* COLOR */
+::-webkit-scrollbar {
+  display: none;
+}
 .bg-color-black {
   background-color: #000000 !important;
 }
