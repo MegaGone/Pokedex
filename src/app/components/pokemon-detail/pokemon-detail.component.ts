@@ -1,23 +1,25 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { MAT_BOTTOM_SHEET_DATA } from '@angular/material/bottom-sheet';
-import { PokemonStats } from '../../models/pokemon.stats';
-@Component({
-  selector: 'app-stats',
-  templateUrl: './stats.component.html',
-  styleUrls: ['./stats.component.sass']
-})
-export class StatsComponent implements OnInit {
+import { PokemonDetail } from '../../models/pokemon.detail';
 
-  pokemon: PokemonStats;
+@Component({
+  selector: 'app-pokemon-detail',
+  templateUrl: './pokemon-detail.component.html',
+  styleUrls: ['./pokemon-detail.component.sass']
+})
+export class PokemonDetailComponent implements OnInit {
+
+  pokemon: PokemonDetail;
   classicMode: boolean;
 
-  constructor(@Inject(MAT_BOTTOM_SHEET_DATA) public data: any) {
+  constructor(@Inject(MAT_BOTTOM_SHEET_DATA) public data: any) { 
     this.pokemon = data.pokemon;
     this.classicMode = data.classicMode;
   }
 
   ngOnInit(): void {
   }
+
 
   getAbilities(): string {
     return this.pokemon.abilities.map(x => x.ability.name).join(', ');

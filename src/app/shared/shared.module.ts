@@ -5,12 +5,12 @@ import { ProgressBarComponent } from './progress-bar/progress-bar.component';
 
 
 @NgModule({
-    declarations: [ProgressBarComponent],
-    imports: [
-        CommonModule
-    ],
-    exports: [
-        ProgressBarComponent
-    ]
+  declarations: [ProgressBarComponent],
+  imports: [
+    CommonModule
+  ],
+  exports: [
+    ProgressBarComponent
+  ]
 })
 export class SharedModule { }
